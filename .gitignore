@@ -1,0 +1,12 @@
+# Mac OS files
+**/.DS_Store
+
+# Node.js files
+node_modules
+
+# IDE files
+.idea
+
+# Built files
+dist
+built_tests

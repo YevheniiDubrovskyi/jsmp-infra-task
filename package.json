@@ -1,0 +1,49 @@
+{
+  "name": "jsmp-infra-test-package",
+  "version": "1.0.0",
+  "description": "This is a test package for an educational program",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "npm run compile:tests && node ./built_tests",
+    "clean": "rimraf dist && rimraf built_tests",
+    "watch": "nodemon --exec npm run compile -- ./src",
+    "compile": "babel src --out-dir=dist",
+    "compile:tests": "babel tests --out-dir=built_tests",
+    "prepublish": "npm run clean && npm run compile && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YevheniiDubrovskyi/jsmp-infra-task.git"
+  },
+  "keywords": [
+    "array",
+    "string",
+    "util"
+  ],
+  "engines": {
+    "node": ">=6.12.0"
+  },
+  "author": "Yevhenii Dubrovskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YevheniiDubrovskyi/jsmp-infra-task/issues"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "homepage": "https://github.com/YevheniiDubrovskyi/jsmp-infra-task#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.17.3",
+    "rimraf": "^2.6.2"
+  }
+}
