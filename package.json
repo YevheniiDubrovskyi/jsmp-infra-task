@@ -1,6 +1,6 @@
 {
   "name": "jsmp-infra-test-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a test package for an educational program",
   "main": "./dist/index.js",
   "scripts": {
@@ -18,7 +18,8 @@
   "keywords": [
     "array",
     "string",
-    "util"
+    "util",
+    "test package"
   ],
   "engines": {
     "node": ">=6.12.0"
